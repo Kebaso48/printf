@@ -1,8 +1,8 @@
 #include "main.h"
-int _printchar(va_list types, char buffer[],
+int print_char(va_list types, char buffer[],
 		int flags, int wid, int prec, int size);
 /**
- * _printchar - Prints a char
+ * print_char - Prints a char
  * @types: List of arguments
  * @buffer: Buffer array that handles print
  * @flags:  Calculates active flags
@@ -11,7 +11,7 @@ int _printchar(va_list types, char buffer[],
  * @size: specifies Size
  * Return: The number of chars printed
  */
-int _printchar(va_list types, char buffer[],
+int print_char(va_list types, char buffer[],
 		int flags, int wid, int prec, int size)
 {
 	char c = va_arg(types, int);
@@ -20,7 +20,7 @@ int _printchar(va_list types, char buffer[],
 }
 
 /**
- * _printstring - Prints a string
+ * print_string - Prints a string
  * @types: List a of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -29,7 +29,7 @@ int _printchar(va_list types, char buffer[],
  * @size: Size specifier
  * Return: Number of chars printed
  */
-int _printstring(va_list types, char buffer[],
+int print_string(va_list types, char buffer[],
 		int flags, int width, int precision, int size)
 {
 	int length = 0, i;
